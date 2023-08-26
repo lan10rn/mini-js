@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Gradient Generator</title>
+  </head>
+  <body>
+    <p class="exp">Linear Gradient Generator</p>
+    <div class="container">
+      <div class="colors">
+        <div class="one">
+            <input type="color" id="color-a" value="#4ba5c3" />
+            <p style="text-align: center;">Color 1</p>
+        </div>
+        <div class="one">
+            <input type="color" id="color-b" value="#8f70bd" />
+            <p style="text-align: center;">Color 2</p>
+        </div>
+      </div>
+      <div class="buttons">
+        <button onclick="setDirection('to top' , this)">
+          <i class="fas fa-arrow-up"></i>
+        </button>
+        <button onclick="setDirection('to bottom' , this)">
+          <i class="fas fa-arrow-down"></i>
+        </button>
+        <button onclick="setDirection('to left' , this)">
+          <i class="fas fa-arrow-left"></i>
+        </button>
+        <button onclick="setDirection('to right' , this)">
+          <i class="fas fa-arrow-right"></i>
+        </button>
+        <button
+          class="rotate-icon"
+          onclick="setDirection('to top right', this)"
+        >
+          <i class="fas fa-arrow-up"></i>
+        </button>
+        <button
+          class="rotate-icon"
+          onclick="setDirection('to bottom left', this)"
+        >
+          <i class="fas fa-arrow-down"></i>
+        </button>
+        <button
+          class="rotate-icon"
+          onclick="setDirection('to bottom right', this)"
+        >
+          <i class="fas fa-arrow-right"></i>
+        </button>
+        <button class="rotate-icon" onclick="setDirection('to top left', this)">
+          <i class="fas fa-arrow-left"></i>
+        </button>
+      </div>
+      <button id="submit" onclick="generateCode()">Generate</button>
+      <div class="output">
+        <textarea name="" id="code" cols="30" rows="2"></textarea>
+        <button id="copy" onclick="copyText()">Copy</button>
+      </div>
+    </div>
+    <div id="cpyBar">Copied . . .</div>
+    <script src="gradient.js"></script>
+  </body>
+</html>
